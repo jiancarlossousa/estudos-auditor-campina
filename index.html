@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos AFRM — Auditor Fiscal da Receita Municipal · Campina Grande</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">ISS</span>
+      <div>
+        <h1>Estudos AFRM</h1>
+        <p class="subtitle">Auditor Fiscal da Receita Municipal · Campina Grande/PB</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn active" data-view="dashboard">Painel</button>
+      <button class="nav-btn" data-view="plano">Plano 📅</button>
+      <button class="nav-btn" data-view="questoes">Questões</button>
+      <button class="nav-btn" data-view="revisao">Revisão ⚡</button>
+      <button class="nav-btn" data-view="simulado">Simulado</button>
+      <button class="nav-btn" data-view="resumos">Resumos</button>
+      <button class="nav-btn" data-view="flashcards">Flashcards</button>
+      <button class="nav-btn" data-view="desempenho">Desempenho</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- Painel -->
+    <section id="view-dashboard" class="view active">
+      <div class="hero">
+        <div>
+          <h2>Rumo à aprovação 🎯</h2>
+          <p>ISS Campina Grande · Edital 01/2026 (IDECAN). Provas: <strong>09 e 10/01/2027</strong>. 40 questões (20 gerais + 20 específicas, que valem o dobro). Comece a estudar por aqui.</p>
+        </div>
+        <div class="hero-stats" id="hero-stats"></div>
+      </div>
+
+      <div id="dash-progresso"></div>
+
+      <h3 class="section-title">Conhecimentos Básicos</h3>
+      <div class="disc-grid" id="grid-basicas"></div>
+
+      <h3 class="section-title">Conhecimentos Específicos</h3>
+      <div class="disc-grid" id="grid-especificas"></div>
+    </section>
+
+    <!-- Questões -->
+    <section id="view-questoes" class="view">
+      <div class="view-head">
+        <h2>Banco de Questões</h2>
+        <div class="filtros">
+          <select id="filtro-questoes" class="select"></select>
+          <select id="filtro-banca" class="select"></select>
+        </div>
+      </div>
+      <p class="contador" id="contador-questoes"></p>
+      <div id="questoes-container"></div>
+    </section>
+
+    <!-- Resumos -->
+    <section id="view-resumos" class="view">
+      <div class="view-head">
+        <h2>Resumos & Material Teórico</h2>
+        <select id="filtro-resumos" class="select"></select>
+      </div>
+      <div id="resumos-container"></div>
+    </section>
+
+    <!-- Flashcards -->
+    <section id="view-flashcards" class="view">
+      <div class="view-head">
+        <h2>Flashcards</h2>
+        <select id="filtro-flashcards" class="select"></select>
+      </div>
+      <div id="flashcard-stage"></div>
+    </section>
+
+    <!-- Plano de Estudos -->
+    <section id="view-plano" class="view">
+      <div class="view-head">
+        <h2>Plano de Estudos 📅</h2>
+      </div>
+      <div id="plano-container"></div>
+    </section>
+
+    <!-- Revisão Inteligente -->
+    <section id="view-revisao" class="view">
+      <div class="view-head">
+        <h2>Revisão Inteligente ⚡</h2>
+      </div>
+      <p class="contador" id="contador-revisao"></p>
+      <div id="revisao-container"></div>
+    </section>
+
+    <!-- Simulado -->
+    <section id="view-simulado" class="view">
+      <div class="view-head">
+        <h2>Modo Simulado ⏱️</h2>
+      </div>
+      <div id="simulado-config"></div>
+      <div id="simulado-area"></div>
+    </section>
+
+    <!-- Desempenho -->
+    <section id="view-desempenho" class="view">
+      <div class="view-head">
+        <h2>Meu Desempenho 📊</h2>
+        <button id="btn-limpar-progresso" class="btn-secundario">Limpar progresso</button>
+      </div>
+      <div id="desempenho-container"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Material de estudo pessoal · Base: Edital nº 01/2026 · Prefeitura de Campina Grande/PB (IDECAN)</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
